@@ -30,5 +30,5 @@ class Bhavcopy(object):
                 break
         
         return Template(filename='table_html.html').render(data=data,columns=['SC_NAME','SC_CODE', 'OPEN', 'HIGH', 'LOW', 'CLOSE'])
-
+cherrypy.server.socket_host = '0.0.0.0'
 cherrypy.quickstart(Bhavcopy())
