@@ -1,0 +1,6 @@
+requests==2.20.1
+redis==3.3.6
+pandas==0.24.0
+CherryPy==18.1.2
+lxml==4.2.5
+Mako==1.1.0

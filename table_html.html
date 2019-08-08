@@ -1,0 +1,47 @@
+<h1>Bhavcopy document information</h1>
+<title>BhavcopyInfo</title>
+    <head>
+<style>
+#table_doc {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#table_doc td, #table_doc th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table_doc tr:nth-child(even){background-color: #f2f2f2;}
+
+#table_doc tr:hover {background-color: #ddd;}
+
+#table_doc th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #00bfff;
+  color: white;
+}
+</style>
+    </head>
+	<p>
+    <form method="get" action="/">
+      <input type="text" value="" name="get_name" />
+      <button type="submit">Filter</button>
+    </form>
+    </p>
+    <table border=1 id="table_doc">
+	<tr>
+	% for row in columns:
+	<th>${row}</th>
+	%endfor
+    </tr>
+    % for row in data: 
+        <tr>
+        % for col in columns: 
+            <td>${row[col]}</td>
+        % endfor 
+        </tr>
+    % endfor
